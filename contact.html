@@ -2,10 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Contact | SoleStyle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
 </head>
 <body>
-    <h1>This is Contact Page</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">SoleStyle</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Contact Us</h1>
+        <p>We’re here to help! Get in touch with us.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="card">
+            <h2>Customer Support</h2>
+            <p>If you have any questions or concerns, our team is ready to assist you.</p>
+            <ul>
+                <li>Email: support@solestyle.com</li>
+                <li>Phone: +63 912 345 6789</li>
+                <li>Location: Manila, Philippines</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Business Inquiries</h2>
+            <p>For wholesale, partnerships, or media inquiries, please contact:</p>
+            <ul>
+                <li>Email: business@solestyle.com</li>
+                <li>Phone: +63 912 987 6543</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Send Us a Message</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea><br><br>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 SoleStyle. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
