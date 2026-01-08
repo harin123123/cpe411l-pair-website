@@ -8,19 +8,20 @@
 /* Body */
 body {
     font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    background-color: #eaf9ea;  /* light green background */
+    background-color: #eaf9ea;
     color: #2b4d2b;
     line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #2E8B57; /* dark green */
+    background-color: #2E8B57;
     color: white;
     padding: 16px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -33,6 +34,7 @@ body {
     list-style: none;
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -46,8 +48,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    background-color: #3CB371; /* medium green hover */
-    color: #ffffff;
+    background-color: #3CB371;
 }
 
 /* Hero */
@@ -88,7 +89,7 @@ body {
     background-color: white;
     padding: 36px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.2); /* green shadow */
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -132,7 +133,7 @@ footer {
     margin-right: 12px;
 }
 
-/* Contact Form Inputs and Textarea */
+/* Form Inputs and Button */
 form input[type="text"],
 form input[type="password"],
 form input[type="email"],
@@ -147,15 +148,14 @@ form textarea {
 }
 
 form input[type="text"]:focus,
-form input[type="password"],
+form input[type="password"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
-    border-color: #3CB371;   /* medium green accent */
+    border-color: #3CB371;
     box-shadow: 0 0 5px rgba(60, 179, 113, 0.5);
     outline: none;
 }
 
-/* Submit Button */
 form button {
     background-color: #2E8B57;
     color: #fff;
@@ -164,27 +164,27 @@ form button {
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
     background-color: #3CB371;
-    color: #fff;
     transform: translateY(-2px);
 }
 
-/* FAQ container */
+/* FAQ */
 .faq-container {
     width: 90%;
     max-width: 800px;
     margin: 40px auto;
 }
 
-/* Each FAQ card */
 details {
     background-color: white;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.2); /* green shadow */
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.2);
     margin-bottom: 15px;
     padding: 15px 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -195,7 +195,6 @@ details:hover {
     box-shadow: 0 14px 30px rgba(46, 139, 87, 0.35);
 }
 
-/* Question styling */
 summary {
     font-weight: bold;
     font-size: 1.15rem;
@@ -209,12 +208,10 @@ summary:hover {
     color: #3CB371;
 }
 
-/* Remove default arrow for summary in some browsers */
 summary::-webkit-details-marker {
     display: none;
 }
 
-/* Add custom plus/minus icons using CSS */
 summary::after {
     content: '+';
     float: right;
@@ -226,7 +223,6 @@ details[open] summary::after {
     content: '−';
 }
 
-/* Answer styling */
 details p {
     margin: 10px 0 0 0;
     color: #2b4d2b;
@@ -235,7 +231,7 @@ details p {
     animation: slideDown 0.4s ease forwards;
 }
 
-/* Keyframe Animations */
+/* Animations */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -244,4 +240,50 @@ details p {
 @keyframes slideDown {
     0% { opacity: 0; max-height: 0; }
     100% { opacity: 1; max-height: 500px; }
+}
+
+/* ====================== Responsive ====================== */
+@media (max-width: 1024px) {
+    .container { gap: 28px; }
+    .card { padding: 30px; }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 20px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .hero {
+        padding: 50px 15px;
+    }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .container { padding: 0 15px; gap: 20px; }
+    .card { padding: 25px; border-radius: 12px; }
+    .faq-container { width: 95%; }
+    details { padding: 12px 15px; }
+    summary { font-size: 1rem; }
+    details p { font-size: 0.95rem; }
+    form input, form textarea { font-size: 0.95rem; padding: 10px 12px; }
+    form button { font-size: 0.95rem; padding: 10px 20px; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.6rem; }
+    .hero p { font-size: 0.9rem; }
+    .card { padding: 20px; }
+    form input, form textarea { font-size: 0.9rem; padding: 8px 10px; }
+    form button { padding: 10px 15px; font-size: 0.9rem; }
 }
