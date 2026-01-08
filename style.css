@@ -160,3 +160,52 @@ form button:hover {
     background-color: #38b2ac; /* cyan accent */
     transform: translateY(-2px);
 }
+
+        /* FAQ container */
+        .faq-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        /* Each FAQ card */
+        details {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            padding: 10px 15px;
+        }
+
+        /* Question styling */
+        summary {
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            list-style: none;
+            color: #034048;
+        }
+
+        /* Remove default arrow for summary in some browsers */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Add custom plus/minus icons using CSS */
+        summary::after {
+            content: '+';
+            float: right;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            content: '−';
+        }
+
+        /* Answer styling */
+        details p {
+            margin: 10px 0 0 0;
+            color: #034048;
+            line-height: 1.5;
+        }
