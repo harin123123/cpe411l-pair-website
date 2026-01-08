@@ -1,19 +1,21 @@
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Body */
 body {
     font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    background-color: #f0fafa;
-    color: #2a2a2a;
+    background-color: #eaf9ea;  /* light green background */
+    color: #2b4d2b;
     line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #0f4c5c;
+    background-color: #2E8B57; /* dark green */
     color: white;
     padding: 16px 32px;
     display: flex;
@@ -44,12 +46,13 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    background-color: #38b2ac;
+    background-color: #3CB371; /* medium green hover */
+    color: #ffffff;
 }
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, #0f4c5c, #38b2ac);
+    background: linear-gradient(135deg, #2E8B57, #3CB371);
     color: white;
     padding: 90px 20px;
     text-align: center;
@@ -62,11 +65,13 @@ body {
 .hero h1 {
     font-size: 2.6rem;
     margin-bottom: 12px;
+    animation: fadeIn 1s ease forwards;
 }
 
 .hero p {
     font-size: 1.1rem;
     opacity: 0.95;
+    animation: fadeIn 1.5s ease forwards;
 }
 
 /* Layout */
@@ -83,17 +88,23 @@ body {
     background-color: white;
     padding: 36px;
     border-radius: 16px;
-    box-shadow: 0 14px 30px rgba(15, 76, 92, 0.15);
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.2); /* green shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(46, 139, 87, 0.35);
 }
 
 .card h2 {
     margin-bottom: 14px;
-    color: #0f4c5c;
+    color: #2E8B57;
 }
 
 /* Footer */
 footer {
-    background-color: #0f4c5c;
+    background-color: #2E8B57;
     color: white;
     text-align: center;
     padding: 18px;
@@ -112,7 +123,7 @@ footer {
     align-items: center;
     margin-bottom: 12px;
     font-size: 1rem;
-    color: #034048;
+    color: #2b4d2b;
 }
 
 .contact-icon {
@@ -123,6 +134,7 @@ footer {
 
 /* Contact Form Inputs and Textarea */
 form input[type="text"],
+form input[type="password"],
 form input[type="email"],
 form textarea {
     width: 100%;
@@ -134,18 +146,18 @@ form textarea {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Focus effect for inputs */
 form input[type="text"]:focus,
+form input[type="password"],
 form input[type="email"]:focus,
 form textarea:focus {
-    border-color: #38b2ac;   /* cyan accent */
-    box-shadow: 0 0 5px rgba(56, 178, 172, 0.5);
+    border-color: #3CB371;   /* medium green accent */
+    box-shadow: 0 0 5px rgba(60, 179, 113, 0.5);
     outline: none;
 }
 
 /* Submit Button */
 form button {
-    background-color: #0f4c5c; /* dark cyan */
+    background-color: #2E8B57;
     color: #fff;
     padding: 12px 25px;
     border: none;
@@ -155,57 +167,81 @@ form button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover effect for button */
 form button:hover {
-    background-color: #38b2ac; /* cyan accent */
+    background-color: #3CB371;
+    color: #fff;
     transform: translateY(-2px);
 }
 
-        /* FAQ container */
-        .faq-container {
-            width: 90%;
-            max-width: 800px;
-            margin: 40px auto;
-        }
+/* FAQ container */
+.faq-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+}
 
-        /* Each FAQ card */
-        details {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin-bottom: 15px;
-            padding: 10px 15px;
-        }
+/* Each FAQ card */
+details {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.2); /* green shadow */
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        /* Question styling */
-        summary {
-            font-weight: bold;
-            font-size: 1.1rem;
-            cursor: pointer;
-            list-style: none;
-            color: #034048;
-        }
+details:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(46, 139, 87, 0.35);
+}
 
-        /* Remove default arrow for summary in some browsers */
-        summary::-webkit-details-marker {
-            display: none;
-        }
+/* Question styling */
+summary {
+    font-weight: bold;
+    font-size: 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    color: #2E8B57;
+    transition: color 0.3s ease;
+}
 
-        /* Add custom plus/minus icons using CSS */
-        summary::after {
-            content: '+';
-            float: right;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
+summary:hover {
+    color: #3CB371;
+}
 
-        details[open] summary::after {
-            content: '−';
-        }
+/* Remove default arrow for summary in some browsers */
+summary::-webkit-details-marker {
+    display: none;
+}
 
-        /* Answer styling */
-        details p {
-            margin: 10px 0 0 0;
-            color: #034048;
-            line-height: 1.5;
-        }
+/* Add custom plus/minus icons using CSS */
+summary::after {
+    content: '+';
+    float: right;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    content: '−';
+}
+
+/* Answer styling */
+details p {
+    margin: 10px 0 0 0;
+    color: #2b4d2b;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    animation: slideDown 0.4s ease forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; max-height: 0; }
+    100% { opacity: 1; max-height: 500px; }
+}
