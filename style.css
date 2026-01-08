@@ -120,3 +120,43 @@ footer {
     height: 24px;
     margin-right: 12px;
 }
+
+/* Contact Form Inputs and Textarea */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect for inputs */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #38b2ac;   /* cyan accent */
+    box-shadow: 0 0 5px rgba(56, 178, 172, 0.5);
+    outline: none;
+}
+
+/* Submit Button */
+form button {
+    background-color: #0f4c5c; /* dark cyan */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for button */
+form button:hover {
+    background-color: #38b2ac; /* cyan accent */
+    transform: translateY(-2px);
+}
