@@ -99,3 +99,24 @@ footer {
     padding: 18px;
     margin-top: 80px;
 }
+
+/* Contact List Icons */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #034048;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
