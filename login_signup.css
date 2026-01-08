@@ -1,0 +1,65 @@
+/* Center the form card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex: 1;
+}
+
+/* Form card */
+.card-login {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(46, 139, 87, 0.2);
+    width: 100%;              /* make it narrower */
+    max-width: 500px;        /* set max width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    max-height: 600px;
+}
+
+.card-login:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(46, 139, 87, 0.35);
+}
+
+/* Center the submit button */
+form button {
+    width: auto;             /* shrink to button size */
+    display: block;
+    margin: 0 auto;          /* center horizontally */
+    background-color: #2E8B57;
+    color: #fff;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #3CB371;
+    transform: translateY(-2px);
+}
+
+/* Paragraphs under the form (like links) */
+form p {
+    text-align: center;       /* center the text */
+    margin-top: 12px;
+    font-size: 0.95rem;
+}
+
+/* Link inside the paragraph */
+form p a {
+    color: #2E8B57;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+form p a:hover {
+    color: #3CB371;
+}
